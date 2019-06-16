@@ -1,27 +1,29 @@
 <h1 class="h2">通訊錄維護</h1>
 <p-panel>
   <p-header>
-    <p-button icon="pi pi-search" label="查詢" styleClass="ui-button-info" style='margin-right: .5em'></p-button>
+    <p-button icon="pi pi-search" label="查詢" styleClass="ui-button-info" style='margin-right: 0.5em'
+      (click)="showQuotationDialog()"></p-button>
     <p-button icon="pi pi-user-plus" label="新增" styleClass="ui-button-success" (click)="create()"
-      style='margin-right: .5em'></p-button>
-    <p-button icon="pi pi-pencil" label="修改" styleClass="ui-button-warning" style='margin-right: .5em'></p-button>
+      [disabled]="!mainForm.valid" style='margin-right: 0.5em'></p-button>
+    <p-button icon="pi pi-pencil" label="修改" styleClass="ui-button-warning" style='margin-right: 0.5em'
+      [disabled]="!mainForm.valid"></p-button>
     <p-button icon="pi pi-user-minus" label="刪除" (click)="delete()" styleClass="ui-button-danger"
-      style='margin-right: .5em'></p-button>
+      style='margin-right: 0.5em'></p-button>
   </p-header>
-  <div class="ui-g ui-fluid">
+  <div class="ui-g ui-fluid" [formGroup]="mainForm">
 
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">職工編號</span>
-        <input type="text" pInputText>
-        <button pButton type="button" icon="pi pi-user" (click)="showUserPicker()" class="ui-button-warn"
+        <input type="text" pInputText formControlName="empNo">
+        <button pButton type="button" icon="pi pi-user" (click)="showUserDialog()" class="ui-button-warn"
           style='width:60px'></button>
       </div>
     </div>
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">單位代號</span>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" formControlName="depNo">
           <option>A100</option>
           <option>A110</option>
           <option>A120</option>
@@ -51,25 +53,25 @@
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">分機</span>
-        <input type="text" pInputText>
+        <input type="text" pInputText formControlName="phone">
       </div>
     </div>
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">手機</span>
-        <input type="text" pInputText>
+        <input type="text" pInputText formControlName="phone">
       </div>
     </div>
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">手機直撥碼</span>
-        <input type="text" pInputText placeholder="Username">
+        <input type="text" pInputText formControlName="directNo">
       </div>
     </div>
     <div class="ui-g-12 ui-md-4">
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon input-title-addon">Email</span>
-        <input type="text" pInputText>
+        <input type="text" pInputText formControlName="email">
       </div>
     </div>
     <div class="ui-g-12 ui-md-4">
@@ -116,5 +118,11 @@
       </div>
     </div>
   </div>
+  <p>
+    Form Vaule: {{ mainForm.value | json }}
+
+  </p>
+
+
 </p-panel>
 <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>

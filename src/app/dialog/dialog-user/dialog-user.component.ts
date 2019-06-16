@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpVO } from 'src/app/vo/EmpVO';
 import { DynamicDialogRef, DynamicDialogConfig } from 'primeng/api';
+import { EmpVO } from 'src/app/vo/EmpVO';
 
 @Component({
-  selector: 'app-common-user-picker',
-  templateUrl: './common-user-picker.component.html',
-  styleUrls: ['./common-user-picker.component.css']
+  selector: 'app-dialog-user',
+  templateUrl: './dialog-user.component.html',
+  styleUrls: ['./dialog-user.component.css']
 })
-export class CommonUserPickerComponent implements OnInit {
+export class DialogUserComponent implements OnInit {
+
   empVos: EmpVO[] = [{
     compId: '0038',
     empNo: 'A230',
@@ -50,4 +51,7 @@ export class CommonUserPickerComponent implements OnInit {
   ngOnInit() {
   }
 
+  confirm() {
+    this.ref.close('HAHAHA');
+  }
 }

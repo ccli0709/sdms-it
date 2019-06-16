@@ -1,10 +1,10 @@
 export class EmpVO {
-  compId: string;
-  empNo: string;
-  chiName: string;
-  depNo: string;
-  postName: string;
-  phone: string;
-  directNo: string;
-  email: string;
+  compId = '';
+  empNo = '';
+  chiName = '';
+  depNo = '';
+  postName = '';
+  phone = '';
+  directNo = '';
+  email = '';
 }

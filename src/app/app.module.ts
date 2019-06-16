@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AccordionModule } from 'primeng/accordion';
 import { PanelMenuModule } from 'primeng/panelmenu';
@@ -33,7 +35,8 @@ import { ContactListComponent } from './contact/contact-list/contact-list.compon
 import { ContactEditComponent } from './contact/contact-edit/contact-edit.component';
 import { CommonMenuComponent } from './common/common-menu/common-menu.component';
 import { CommonHeaderComponent } from './common/common-header/common-header.component';
-import { CommonUserPickerComponent } from './common/common-user-picker/common-user-picker.component';
+import { DialogQuotationComponent } from './dialog/dialog-quotation/dialog-quotation.component';
+import { DialogUserComponent } from './dialog/dialog-user/dialog-user.component';
 
 @NgModule({
   declarations: [
@@ -42,15 +45,19 @@ import { CommonUserPickerComponent } from './common/common-user-picker/common-us
     ContactEditComponent,
     CommonMenuComponent,
     CommonHeaderComponent,
-    CommonUserPickerComponent
+    DialogQuotationComponent,
+    DialogUserComponent
   ],
   entryComponents: [
-    CommonUserPickerComponent
+    DialogQuotationComponent,
+    DialogUserComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AccordionModule,
     PanelMenuModule,
     MenubarModule,

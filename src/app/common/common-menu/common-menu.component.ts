@@ -19,8 +19,8 @@ export class CommonMenuComponent implements OnInit {
         expanded: true,
         icon: 'pi pi-fw pi-users',
         items: [
-          { label: '通訊錄維護', icon: 'pi pi-fw pi-pencil', routerLink: ['/contact-list'] },
-          { label: '通訊錄清單', icon: 'pi pi-fw pi-bars', routerLink: ['/contact-edit'] }
+          { label: '通訊錄維護', icon: 'pi pi-fw pi-pencil', routerLink: ['/contact-edit'] },
+          { label: '通訊錄清單', icon: 'pi pi-fw pi-bars', routerLink: ['/contact-list'] }
         ]
       }
     ];

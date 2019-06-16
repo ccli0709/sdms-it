@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommonUserPickerComponent } from './common-user-picker.component';
+import { DialogUserComponent } from './dialog-user.component';
 
-describe('CommonUserPickerComponent', () => {
-  let component: CommonUserPickerComponent;
-  let fixture: ComponentFixture<CommonUserPickerComponent>;
+describe('DialogUserComponent', () => {
+  let component: DialogUserComponent;
+  let fixture: ComponentFixture<DialogUserComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommonUserPickerComponent ]
+      declarations: [ DialogUserComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommonUserPickerComponent);
+    fixture = TestBed.createComponent(DialogUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
