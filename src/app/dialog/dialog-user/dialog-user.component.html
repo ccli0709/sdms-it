@@ -1,4 +1,5 @@
-<p-table [value]="empVos">
+帶入參數(1)單位:{{ dept }},(2)類型:{{ type }}
+<p-table [value]="empVos" rowHover="true" selectionMode="single" (onRowSelect)="confirm($event)">
   <ng-template pTemplate="header">
     <tr>
       <th>單位</th>
@@ -10,17 +11,15 @@
       <th>電子郵件</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-empVo>
-    <tr>
-      <td>{{empVo.depNo}}</td>
-      <td>{{empVo.chiName}}</td>
-      <td>{{empVo.email}}</td>
-      <td>{{empVo.depNo}}</td>
-      <td>{{empVo.depNo}}</td>
-      <td>{{empVo.depNo}}</td>
-      <td>{{empVo.depNo}}</td>
+  <ng-template pTemplate="body" let-rowData>
+    <tr [pSelectableRow]="rowData">
+      <td>{{rowData.depNo}}</td>
+      <td>{{rowData.empNo}}</td>
+      <td>{{rowData.chiName}}</td>
+      <td>{{rowData.depNo}}</td>
+      <td>{{rowData.depNo}}</td>
+      <td>{{rowData.depNo}}</td>
+      <td>{{rowData.depNo}}</td>
     </tr>
   </ng-template>
 </p-table>
-
-<p-button icon="pi pi-search" label="確定" styleClass="ui-button-info" (click)="confirm()"></p-button>

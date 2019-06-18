@@ -1,0 +1,61 @@
+[{
+  "gcid": "0038",
+  "id": "B000",
+  "name": "董事長",
+  "level": "B",
+  "description": "董事長"
+}, {
+  "gcid": "0038",
+  "id": "P000",
+  "name": "總經理",
+  "level": "P",
+  "description": "總經理"
+}, {
+  "gcid": "0038",
+  "id": "AA00",
+  "name": "行政助理副總",
+  "level": "0",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A100",
+  "name": "行政處",
+  "level": "1",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A200",
+  "name": "財會處",
+  "level": "1",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A110",
+  "name": "人力資源組",
+  "level": "2",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A120",
+  "name": "行政總務組",
+  "level": "2",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A210",
+  "name": "成本組",
+  "level": "2",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A220",
+  "name": "會計組",
+  "level": "2",
+  "description": ""
+}, {
+  "gcid": "0038",
+  "id": "A230",
+  "name": "資訊組",
+  "level": "2",
+  "description": ""
+}]

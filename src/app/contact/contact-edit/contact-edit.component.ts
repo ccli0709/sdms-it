@@ -76,26 +76,31 @@ export class ContactEditComponent implements OnInit {
 
 
   showUserDialog() {
-    //[TODO]呼叫彈出視窗時需可以帶入參數
+    //呼叫彈出視窗時需可以帶入參數, 例如根據帶出所選單位的所有人員名單
     const ref = this.dialogService.open(DialogUserComponent, {
+      data: {
+        dept: this.f.depNo.value,
+        type: 'ALL'
+      },
       header: '選擇使用者',
       width: '50%',
-      contentStyle: { 'max-height': '350px', 'overflow': 'auto' }
+      contentStyle: { 'max-height': '350px', overflow: 'auto' }
     });
 
     // 接收由彈出視窗傳回的物件並應用在此元件裡
     ref.onClose.subscribe((result: string) => {
       if (result) {
-        this.f.uid.setValue(result);
+        this.f.empNo.setValue(result);
       }
     });
   }
 
   create() {
+    // [TODO] 表單驗證通過可以把物件完整拿出去送到後端去
 
-
-    // stop here if form is invalid
+    // 按鈕有使用invalid限制住,但為了保險起見可以再加一道關卡
     if (this.mainForm.invalid) {
+      this.messageService.add({ severity: 'error', summary: '系統訊息', detail: '表單資料尚未完整填寫' });
       return;
     }
 

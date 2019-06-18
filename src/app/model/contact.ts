@@ -1,5 +1,5 @@
 export interface Contact {
-  compId: string;
+  guid: string;
   empNo: string;
   chiName: string;
   depNo: string;

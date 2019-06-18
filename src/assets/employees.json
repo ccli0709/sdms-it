@@ -1,0 +1,28 @@
+[{
+  "gcid": "0038",
+  "guid": "SD0027",
+  "name": "李政忠",
+  "engName": "ccli0709",
+  "dept": "A230",
+  "deptName": "資訊組",
+  "level": "20",
+  "position": "經理"
+}, {
+  "gcid": "0038",
+  "guid": "SD0060",
+  "name": "陳炯霖",
+  "engName": "jonny",
+  "dept": "A230",
+  "deptName": "資訊組",
+  "level": "20",
+  "position": "工程師"
+}, {
+  "gcid": "0038",
+  "guid": "SDT077",
+  "name": "趙育賢",
+  "engName": "chou",
+  "dept": "A230",
+  "deptName": "資訊組",
+  "level": "20",
+  "position": "工程師"
+}]
